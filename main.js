@@ -61,3 +61,15 @@ container.addEventListener('click', (e) => {
   scale = 1 + (scale * 2) % 7;
   gsap.to('.pointer', 0.125, {scale})
 })
+
+
+
+const targetDiv = document.querySelector('#mouseClick')
+targetDiv.addEventListener('click', () => {
+  targetDiv.style.backgroundColor = 'blue'
+})
+targetDiv.addEventListener('mousemove', (e) => {
+  targetDiv.style.backgroundColor = 'red'
+  document.querySelector('#mouseX').innerText = e.x
+  document.querySelector('#mouseY').innerText = e.y
+})
